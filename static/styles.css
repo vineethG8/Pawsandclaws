@@ -1,0 +1,62 @@
+
+#topdiv1, #topdiv0{
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 15%;
+	background-color: white;
+}
+
+#topdiv4, #topdiv5, #topdiv6{
+	margin-top: 10%;
+	padding-bottom: 50px;
+}
+
+#index0, #index1{
+	box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+	padding:10px 5px 15px 20px;
+	/* padding-top: 30px;
+	padding-bottom: 30px; */
+	width: auto;
+}
+
+#topdiv2, #topdiv5{
+	background-color: #ffd8d8;
+}
+
+#topdiv2, #topdiv3{
+	margin-top: 2%;
+	margin-left: 10%;
+	display: none;
+	background-color:whitesmoke;
+}
+
+.needspace{
+	margin-left: 15px;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 5px;
+    width: 100%;
+    border: 1px solid rgb(13, 13, 13);
+	background-color: aliceblue;
+}
+
+
+th, td {
+	text-align: left;
+    padding: 16px;
+}
+
+.header{
+    width: 100px;
+    height: 50px;
+    text-align: left;
+}
+body{
+    background-image: url('https://img.freepik.com/premium-photo/dogs_19485-29382.jpg?w=996');
+	background-repeat: no-repeat;
+    background-size:cover;
+	/* height: 100%; */
+	/* background-size: auto 100%; */
+}

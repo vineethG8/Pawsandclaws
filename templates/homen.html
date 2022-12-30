@@ -1,0 +1,110 @@
+{% extends "layout.html" %} {% block title %} Home {% endblock %} {% block body%}
+
+<div class="container" id="topdiv4">
+  <nav class="navbar navbar-light bg-light">
+    <span class="navbar-brand mb-0 h1">View all Products</span></a>
+    <a class="btn btn-outline-info my-2 my-sm-0" href="{{url_for('admin_logout')}}" >Logout</a>
+  </nav>
+  <!-- {% if message %}
+  <div class="alert alert-success" role="alert">{{ message }}</div>
+  {% endif %} -->
+  <div class="row" id="index1">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">ADD PRODUCTS</h5>
+          <p class="card-text">To add new product</p>
+          <button class="btn btn-primary" id="add_new">Click here</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">MY PRODUCTS</h5>
+          <p class="card-text">To view your products</p>
+          <button class="btn btn-primary" id="edit">Click here</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card w-75" id="topdiv2">
+    <form style="color:blueviolet;" class="card-body" action="{{ url_for('home') }}" method="POST" enctype="multipart/form-data">
+      <h5 class="card-title">Add New Item</h5>
+      <div class="form-group">
+        <label for="category">Category</label>
+        <select name="category" id="Category">
+          <option value="Dogs">Dogs</option>
+          <option value="Cats">Cats</option>
+          <option value="Fishes">Fishes</option>
+        </select>
+        <!-- <input type="text" class="form-control" name="category" required autofocus> -->
+      </div>
+      <div class="form-group">
+        <label for="Sub-category">Sub-category</label>
+        <select name="Sub-category" id="Sub-category">
+          <optgroup label="Dogs">
+            <option value="lab">lab</option>
+            <option value="shepheerd">shepheerd</option>
+            <option value="beagle">beagle</option>
+            <option value="Small-Dog-Breeds">Small-Dog-Breeds</option>
+          </optgroup>
+          <optgroup label="Cats">
+            <option value="siamese">siamese</option>
+            <option value="Exotic">Exotic</option>
+            <option value="Maine">Maine</option>
+            <option value="Munchkin">Munchkin</option>
+          </optgroup>
+        </select>
+        <!-- <input type="text" class="form-control" name="category" required autofocus> -->
+      </div>
+      <div class="form-group">
+        <label for="number">proid</label>
+        <input type="number" class="form-control" name="proid" />
+      </div>
+      <div class="form-group">
+        <label for="category">Description</label>
+        <input type="text" class="form-control" name="description" />
+      </div>
+      <div class="form-group">
+        <label for="price">Price</label>
+        <input type="text" class="form-control" name="price_range" />
+        </div>
+      <div class="form-group">
+        <label for="category">Comments</label>
+        <input type="text" class="form-control" name="comments" />
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlFile1">Product Image</label>
+        <input
+          type="file"class="form-control-file" name="image"accept=".."/>
+      </div>
+      <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+  </div>
+  <div id="topdiv3">
+    {% if rows %}
+    <div class="row">
+      {% for row in rows %}
+      <div class="card needspace" style="width: 18rem">
+        <img src="{{ url_for('static_dir', path = 'images/'+row['PROID'])}}" class="card-img-top" alt="Your uploaded image" height="400"/>
+        <div class="card-body">
+          <!-- <h5 class="card-title">{{row['NAME']}}</h5> -->
+          <p class="card-text">{{row['CATEGORY']}}</p>
+          <p class="card-text">{{row['SUB_CATEGORY']}}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">{{row['DESCRIPTION']}}</li>
+          <li class="list-group-item">Price Range: {{row['PRICE_RANGE']}}</li>
+          <li class="list-group-item">{{row['COMMENTS']}}</li>
+          <li class="list-group-item">Proid:{{row['PROID']}}</li>
+		      <li><form method="post" action="{{url_for('delete_product', PROID=row['PROID'])}}">
+          <center><button type="submit" class="material-icons">delete</button></form></center></li>
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

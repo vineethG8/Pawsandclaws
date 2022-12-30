@@ -1,0 +1,72 @@
+.header{
+    /* padding: 5px 20px; */
+    
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    /* background-color: #236B8E; */
+}
+body{
+    background-image: url('newbgorg.jpg');
+    background-size:cover;
+    /* background-repeat: no-repeat; */
+}
+
+.border{
+    padding: 80px 50px;
+    width: 325px;
+    height: 325px;
+    /* border: 1px solid #236B8E; */
+    /* border-radius: 0px; */
+    background-color: rgb(126, 219, 240);
+    opacity: 0.8;
+    border-radius: 20px;
+}
+
+.btn {
+    padding: 10px 40px;
+    background-color: #05030b;
+    color: #0101014c;
+    font-style:normal;
+    font-weight: bold;
+    border-radius: 10px;
+
+}
+
+.textbox{
+    padding: 10px 40px;
+    background-color: #c5d8d9;
+    text-color: #FFFFFF;
+    border-radius: 10px;
+}
+
+::placeholder {
+    color: #262323;
+    opacity: 0.5;
+    font-style:normal;
+    font-weight: bold;
+}
+
+.word{
+    color: #FFFFFF;
+    font-style:arial;
+    font-weight: bold;
+
+}
+
+.bottom{
+    color: #000000;
+    font-style: oblique;
+    font-weight: bold;
+    font-size: large;
+}
+
+input{
+ text-align: center;   
+}
+
+#sign-up{
+    color: rgb(32, 174, 27);
+
+}
+

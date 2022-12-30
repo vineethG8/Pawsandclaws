@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block body %}
+
+	<div  class="container" id="topdiv6">
+		<nav class="navbar navbar-light bg-light">
+			<span class="navbar-brand mb-0 h1" >Products</span>
+			<a class="navbar-brand mb-0 h2" href="{{url_for('trans')}}">MyCart</a>
+			<!-- <span class="navbar-brand mb-0 h3">Transaction</span> -->
+			<a class="my-2 my-sm-0" href="{{url_for('admin_logout')}}">Logout</a>
+		</nav>
+		{% if rows %}
+				<div class="row" id="index0">
+					{% for row in rows %}
+						<div class="card needspace" style="width: 18rem;">
+							<img src="{{ url_for('static_dir', path = 'images/'+row['PROID']) }}" class="card-img-top" alt="Productimage" height="350">
+							<div class="card-body">
+			    				<h5 class="card-title">{{row['CATEGORY']}}</h5>
+			    				<p class="card-text">{{row['SUB_CATEGORY']}}</p>
+			  				</div>
+			  				<ul class="list-group list-group-flush">
+			  					<li class="list-group-item">{{row['DESCRIPTION']}}</li>
+			    				<li class="list-group-item">Price: {{row['PRICE_RANGE']}}</li>
+			    				<li class="list-group-item">{{row['COMMENTS']}}</li>
+								<!-- <li><button>Add to Cart</button></li> -->
+								<li><a class="list-group-item" href="{{url_for('add_to_cart', PROID=row['PROID'])}}">
+									<button>Add to Cart</button></a></li>
+			  				</ul>
+						</div>
+					{% endfor %}
+				</div>
+			{% endif %}
+	</div>
+{% endblock %}

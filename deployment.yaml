@@ -1,0 +1,20 @@
+ apiVersion: apps/v1
+ kind: Deployment
+ metadata:
+   name: petshop
+ spec:
+   replicas: 5
+   selector:
+     matchLabels:
+       app: petshop
+   template:
+     metadata:
+       labels:
+         app: petshop
+     spec:
+       containers:
+       - name: petshop
+         image:  
+         imagePullPolicy: Always
+         ports:  
+         - containerPort: 5000

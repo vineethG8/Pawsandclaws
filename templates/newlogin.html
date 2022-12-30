@@ -1,0 +1,115 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title> Login </title>
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+             background-color:black;
+            }
+            .bg-image-vertical {
+                position: relative;
+                overflow: hidden;
+                background-repeat: no-repeat;
+                background-position: right center;
+                background-size: auto 100%;
+                }
+                
+                @media (min-width: 1000px) {
+                .h-custom-2 {
+                height: 80%;
+                } 
+                }
+                
+        </style>
+	</head>
+	<body>
+        <h2 style="color: whitesmoke;"><marquee behavior="slide"> Welcome to Pet Avenue</marquee></h2>
+        <h3 style="color: antiquewhite;"> <marquee behavior="slide">Buy Dog's and Cat's</marquee></h3>
+
+        <!-- <h8 > <marquee  style="color: whitesmoke;">BOW BOW </marquee> </h8> -->
+        <!-- <p style="color:red;">Welcome to Pet Avenue</p>
+        <!-- <style>
+            @keyframes slideInLeft {
+              0% {
+                transform: translateX(-100%);
+              }
+              100% {
+                transform: translateX(0);
+              }
+            }
+            header {
+              animation-duration: 2s;
+              animation-timing-function: ease-in-out;
+              animation-delay: 0s;
+              animation-iteration-count: 2;
+              animation-name: slideInLeft;
+              background: #666;
+              padding: 40px;
+            }
+            body {
+              margin: 0;
+              font-family: "Segoe UI", Arial, Helvetica, Sans Serif;
+            }
+            a {
+              text-decoration: none;
+              display: inline-block;
+              margin-right: 10px;
+              color: #fff;
+            }
+          </style>
+        </head>
+        <body>
+          <header>
+            <!-- <p style="color: yellowgreen; size: 10cm;">Paws</p>
+            <!-- <h5 style="color: black;">Paws</h5> -->
+            <!-- <a>Snippets</a>
+            <a>Tools</a> -->
+          </header>
+            <section class="vh-100">
+            <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6 text-black">
+                <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
+        
+                    <form action="{{ url_for('login') }}" method="post" style="width: 23rem;">
+        
+                    <!-- <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 2px"  >Log in</h3> -->
+                    <h3 style="color: white;" >Log in</h3>
+
+                    <div style="color: antiquewhite;" class="msg">{{ msg }}</div>
+
+        
+                    <div class="form-outline mb-4">
+                        <label style="color: white;">Username</label>
+                        <input type="text" name="username" id="form2Example18" class="form-control form-control-lg" />
+                    </div>
+        
+                    <div class="form-outline mb-4">
+                        <label style="color: white;">Password</label>
+                        <input type="password" name="password" id="form2Example28" class="form-control form-control-lg" />
+                    </div>
+                    <div class="pt-1 mb-4">
+                        <button class="btn btn-info btn-lg btn-block" type="submit">Login</button>
+                    </div>
+                    <p class="small mb-5 pb-lg-2"><a class="text-muted" href="#!">Forgot password?</a></p>
+                    <p style="color: antiquewhite;">Don't have an account? <a href="{{url_for('register')}}" class="link-info">Register here</a></p>
+                    <p style="color:antiquewhite">If you are a Merchant  <a href="{{url_for('admin_login')}}" class="link-info">Click here</a></p>
+                    </form>
+                </div>
+                <html>
+        
+                </div>
+                <div class="col-sm-6 px-0 d-none d-sm-block">
+                <img src="static/cd.png"
+                
+                    alt="Login image" class="w-100 vh-100" style="object-position:left; object-position: center;"
+                </div>
+            </div>
+            </div>
+        </section> 
+
+
+

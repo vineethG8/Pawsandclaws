@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% block title %}{% endblock %}</title>
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="../static/styles.css">
+	<!-- <link rel="stylesheet" type="text/css" href="../static/style.css"> -->
+	<script type="text/javascript" src="../static/index.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<!-- <script>
+		window.watsonAssistantChatOptions = {
+		  integrationID: "4025f12b-3285-48ac-add3-13a8295d641c", // The ID of this integration.
+		  region: "jp-tok", // The region your integration is hosted in.
+		  serviceInstanceID: "91bc24c2-c081-47a2-be40-ecd9faa58229", // The ID of your service instance.
+		  onLoad: function(instance) { instance.render(); }
+		};
+		setTimeout(function(){
+		  const t=document.createElement('script');
+		  t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+		  document.head.appendChild(t);
+		});
+	  </script> -->
+	<!-- <!-- <script>
+	  window.watsonAssistantChatOptions = {
+		integrationID: "714254e1-f980-4a07-ae42-760c99a03b6e", // The ID of this integration.
+		region: "us-south", // The region your integration is hosted in.
+		serviceInstanceID: "01de0a4f-76a8-4159-a2af-1d71810589b7", // The ID of your service instance.
+		onLoad: function(instance) { instance.render(); }
+	  };
+	  setTimeout(function(){
+		const t=document.createElement('script');
+		t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+		document.head.appendChild(t);});
+	</script> -->
+</head>
+<body>
+	{% block body %}
+    {% endblock %}
+</body>
+</html>
